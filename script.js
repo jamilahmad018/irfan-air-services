@@ -1,124 +1,184 @@
-
-/* =========================================================
-   IRFAN AIR SERVICES
-   Main JavaScript
-   ========================================================= */
-
-// Wait until the page is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* -----------------------------------------
-       Smooth scrolling for internal links
-       ----------------------------------------- */
+    /* ================= MOBILE MENU ================= */
 
-    const links = document.querySelectorAll('a[href^="#"]');
+    const menuToggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("navigation");
 
-    links.forEach(function (link) {
+    if (menuToggle && navigation) {
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = navigation.classList.toggle("active");
+
+            menuToggle.classList.toggle("active", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+        });
+
+
+        /* Close menu after clicking a link */
+
+        const navLinks = navigation.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navigation.classList.remove("active");
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+        /* Close menu when clicking outside */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navigation.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                navigation.classList.remove("active");
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+            }
+
+        });
+
+    }
+
+
+    /* ================= SMOOTH SCROLL ================= */
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
         link.addEventListener("click", function (event) {
 
             const targetId = this.getAttribute("href");
 
-            if (targetId === "#") {
+            if (
+                !targetId ||
+                targetId === "#" ||
+                !document.querySelector(targetId)
+            ) {
                 return;
             }
 
+            event.preventDefault();
+
             const target = document.querySelector(targetId);
 
-            if (target) {
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
 
         });
 
     });
 
 
-    /* -----------------------------------------
-       Header shadow when scrolling
-       ----------------------------------------- */
+    /* ================= HEADER SHADOW ================= */
 
     const header = document.querySelector(".header");
 
-    window.addEventListener("scroll", function () {
+    function updateHeader() {
 
-        if (window.scrollY > 50) {
-            header.style.boxShadow =
-                "0 5px 25px rgba(0,0,0,0.10)";
+        if (!header) return;
+
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
         } else {
-            header.style.boxShadow =
-                "0 3px 20px rgba(0,0,0,0.04)";
+            header.classList.remove("scrolled");
         }
 
-    });
+    }
+
+    window.addEventListener("scroll", updateHeader);
+
+    updateHeader();
 
 
-    /* -----------------------------------------
-       Reveal elements while scrolling
-       ----------------------------------------- */
+    /* ================= REVEAL ANIMATION ================= */
 
     const revealElements = document.querySelectorAll(
-        ".service-card, .why-card, .destination-card, .about-image"
+        ".service-card, .why-card, .destination-card, .about-image, .about-content, .contact-content, .contact-map"
     );
 
-    const revealObserver = new IntersectionObserver(
-        function (entries, observer) {
+    if ("IntersectionObserver" in window) {
 
-            entries.forEach(function (entry) {
+        const observer = new IntersectionObserver(
+            function (entries, observer) {
 
-                if (entry.isIntersecting) {
+                entries.forEach(function (entry) {
 
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+                    if (entry.isIntersecting) {
 
-                    observer.unobserve(entry.target);
-                }
+                        entry.target.classList.add("show");
 
-            });
+                        observer.unobserve(entry.target);
 
-        },
-        {
-            threshold: 0.12
-        }
-    );
+                    }
 
+                });
 
-    revealElements.forEach(function (element) {
-
-        element.style.opacity = "0";
-        element.style.transform = "translateY(25px)";
-        element.style.transition =
-            "opacity 0.7s ease, transform 0.7s ease";
-
-        revealObserver.observe(element);
-
-    });
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
 
-    /* -----------------------------------------
-       Current year in footer
-       ----------------------------------------- */
+        revealElements.forEach(function (element) {
 
-    const footerYear = document.querySelector(".footer-bottom p");
+            element.classList.add("reveal");
 
-    if (footerYear) {
+            observer.observe(element);
 
-        footerYear.innerHTML =
-            "© " +
-            new Date().getFullYear() +
+        });
+
+    } else {
+
+        revealElements.forEach(function (element) {
+            element.classList.add("show");
+        });
+
+    }
+
+
+    /* ================= CURRENT YEAR ================= */
+
+    const yearElement = document.querySelector(".footer-bottom p");
+
+    if (yearElement) {
+
+        const currentYear = new Date().getFullYear();
+
+        yearElement.innerHTML =
+            "© " + currentYear +
             " Irfan Air Services. All Rights Reserved.";
 
     }
 
 
-    /* -----------------------------------------
-       WhatsApp inquiry tracking
-       ----------------------------------------- */
+    /* ================= WHATSAPP TRACKING ================= */
 
     const whatsappLinks = document.querySelectorAll(
         'a[href*="wa.me"]'
@@ -129,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function () {
 
             console.log(
-                "Irfan Air Services WhatsApp inquiry started."
+                "Irfan Air Services WhatsApp link clicked."
             );
 
         });
