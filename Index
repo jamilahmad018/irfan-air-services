@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Irfan Air Services | Travel & Tourism</title>
+
+    <meta name="description"
+          content="Irfan Air Services - Air ticketing, visa assistance, tour packages, hotel booking and Umrah services in Matta Swat.">
+
+    <meta name="keywords"
+          content="Irfan Air Services, travel agency Swat, air ticketing Swat, visa services Swat, Umrah packages Swat, tours Swat">
+
+    <meta name="author" content="Irfan Air Services">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="top-contact">
+
+            <a href="tel:+923459456645">
+                📞 +92 345 9456645
+            </a>
+
+            <a href="mailto:Irfanswat2@gmail.com">
+                ✉️ Irfanswat2@gmail.com
+            </a>
+
+            <span>
+                📍 Matta, Swat
+            </span>
+
+        </div>
+
+        <div class="top-social">
+
+            <a href="https://www.facebook.com/share/1H9s8GyfRz/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Facebook
+            </a>
+
+            <a href="https://www.instagram.com/irfanairservices"
+               target="_blank"
+               rel="noopener noreferrer">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                ✈
+            </div>
+
+            <div class="logo-text">
+
+                <strong>IRFAN</strong>
+
+                <span>AIR SERVICES</span>
+
+                <small>Your Journey Our Priority</small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="navigation">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#tours">Tours</a>
+
+            <a href="#visa">Visa Services</a>
+
+            <a href="#umrah">Umrah</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <a class="quote-button"
+           href="https://wa.me/923459456645"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            Get a Quote →
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">
+                EXPLORE THE WORLD WITH US
+            </p>
+
+            <h1>
+                Your Journey,
+                <span>Our Priority.</span>
+            </h1>
+
+            <p class="hero-description">
+                Your trusted travel partner for air tickets,
+                visa assistance, tour packages, hotel booking,
+                Umrah services and more.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="https://wa.me/923459456645"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="primary-button">
+
+                    Plan Your Journey →
+
+                </a>
+
+                <a href="#services"
+                   class="secondary-button">
+
+                    Explore Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK SERVICES ================= -->
+
+<section class="quick-services">
+
+    <div class="quick-container">
+
+        <div class="quick-item">
+
+            <div class="quick-icon">✈</div>
+
+            <div>
+                <strong>Air Ticketing</strong>
+                <span>Domestic & International</span>
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <div class="quick-icon">🛂</div>
+
+            <div>
+                <strong>Visa Assistance</strong>
+                <span>Travel & Visit Visas</span>
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <div class="quick-icon">🌍</div>
+
+            <div>
+                <strong>Tour Packages</strong>
+                <span>Explore New Destinations</span>
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <div class="quick-icon">🏨</div>
+
+            <div>
+                <strong>Hotel Booking</strong>
+                <span>Comfortable Stays</span>
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <div class="quick-icon">🕋</div>
+
+            <div>
+                <strong>Umrah Packages</strong>
+                <span>Spiritual Journeys</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                OUR SERVICES
+            </p>
+
+            <h2>
+                Complete Travel Solutions
+            </h2>
+
+            <p>
+                Everything you need for a comfortable,
+                convenient and memorable journey.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- Air Ticketing -->
+
+            <article class="service-card">
+
+                <div class="service-image ticketing-image"></div>
+
+                <div class="service-content">
+
+                    <div class="service-icon">
+                        ✈
+                    </div>
+
+                    <h3>
+                        Air Ticketing
+                    </h3>
+
+                    <p>
+                        Domestic and international flight
+                        ticketing assistance for your journey.
+                    </p>
+
+                    <a href="https://wa.me/923459456645"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Enquire Now →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Visa -->
+
+            <article class="service-card">
+
+                <div class="service-image visa-image"></div>
+
+                <div class="service-content">
+
+                    <div class="service-icon">
+                        🛂
+                    </div>
+
+                    <h3>
+                        Visa Assistance
+                    </h3>
+
+                    <p>
+                        Guidance and assistance for selected
+                        travel and visit visa applications.
+                    </p>
+
+                    <a href="https://wa.me/923459456645"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Enquire Now →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Tours -->
+
+            <article class="service-card">
+
+                <div class="service-image tour-image"></div>
+
+                <div class="service-content">
+
+                    <div class="service-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Tour Packages
+                    </h3>
+
+                    <p>
+                        Discover exciting domestic and
+                        international travel experiences.
+                    </p>
+
+                    <a href="#tours">
+
+                        Explore Tours →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Hotels -->
+
+            <article class="service-card">
+
+                <div class="service-image hotel-image"></div>
+
+                <div class="service-content">
+
+                    <div class="service-icon">
+                        🏨
+                    </div>
+
+                    <h3>
+                        Hotel Booking
+                    </h3>
+
+                    <p>
+                        Find comfortable accommodation for
+                        your business and leisure trips.
+                    </p>
+
+                    <a href="https://wa.me/923459456645"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Enquire Now →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Umrah -->
+
+            <article class="service-card">
+
+                <div class="service-image umrah-image"></div>
+
+                <div class="service-content">
+
+                    <div class="service-icon">
+                        🕋
+                    </div>
+
+                    <h3>
+                        Umrah Packages
+                    </h3>
+
+                    <p>
+                        Travel assistance for your sacred
+                        journey to Makkah and Madinah.
+                    </p>
+
+                    <a href="#umrah">
+
+                        View Packages →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Transport -->
+
+            <article class="service-card">
+
+                <div class="service-image transport-image"></div>
+
+                <div class="service-content">
+
+                    <div class="service-icon">
+                        🚐
+                    </div>
+
+                    <h3>
+                        Travel Assistance
+                    </h3>
+
+                    <p>
+                        Helpful travel arrangements designed
+                        around your journey.
+                    </p>
+
+                    <a href="https://wa.me/923459456645"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Contact Us →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="container about-container">
+
+        <div class="about-image">
+
+            <div class="about-badge">
+
+                <strong>
+                    Travel With
+                </strong>
+
+                <span>
+                    Confidence
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT IRFAN AIR SERVICES
+            </p>
+
+            <h2>
+                Making Your Travel
+                Experience Simpler
+            </h2>
+
+            <p>
+                Irfan Air Services is a travel service provider
+                based in Matta, Swat, helping travelers with
+                air ticketing, visa assistance, tours, hotel
+                bookings and other travel arrangements.
+            </p>
+
+            <p>
+                Our goal is to make travel planning simple,
+                convenient and comfortable by providing
+                professional assistance throughout your journey.
+            </p>
+
+
+            <div class="about-features">
+
+                <div>
+                    ✓ Professional Assistance
+                </div>
+
+                <div>
+                    ✓ Convenient Travel Planning
+                </div>
+
+                <div>
+                    ✓ Domestic & International Travel
+                </div>
+
+                <div>
+                    ✓ Customer-Focused Service
+                </div>
+
+            </div>
+
+
+            <a href="https://wa.me/923459456645"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="primary-button">
+
+                Talk To Us →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DESTINATIONS ================= -->
+
+<section class="destinations section" id="tours">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                POPULAR DESTINATIONS
+            </p>
+
+            <h2>
+                Where Would You Like To Go?
+            </h2>
+
+            <p>
+                Start planning your next adventure with us.
+            </p>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+
+            <div class="destination-card dubai">
+
+                <div class="destination-overlay">
+
+                    <span>
+                        United Arab Emirates
+                    </span>
+
+                    <h3>
+                        Dubai
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-card saudi">
+
+                <div class="destination-overlay">
+
+                    <span>
+                        Saudi Arabia
+                    </span>
+
+                    <h3>
+                        Makkah & Madinah
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-card turkey">
+
+                <div class="destination-overlay">
+
+                    <span>
+                        Türkiye
+                    </span>
+
+                    <h3>
+                        Istanbul
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-card malaysia">
+
+                <div class="destination-overlay">
+
+                    <span>
+                        Malaysia
+                    </span>
+
+                    <h3>
+                        Kuala Lumpur
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VISA ================= -->
+
+<section class="visa-section section" id="visa">
+
+    <div class="container">
+
+        <div class="visa-box">
+
+            <div>
+
+                <p class="section-label">
+                    VISA ASSISTANCE
+                </p>
+
+                <h2>
+                    Planning an International Trip?
+                </h2>
+
+                <p>
+                    Get travel guidance and visa assistance
+                    for your selected destination.
+                </p>
+
+            </div>
+
+
+            <a href="https://wa.me/923459456645"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="primary-button">
+
+                Ask About Visa →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= UMRAH ================= -->
+
+<section class="umrah section" id="umrah">
+
+    <div class="container umrah-container">
+
+        <div class="umrah-content">
+
+            <p class="section-label">
+                UMRAH SERVICES
+            </p>
+
+            <h2>
+                Your Sacred Journey,
+                Planned With Care.
+            </h2>
+
+            <p>
+                Speak with Irfan Air Services about available
+                Umrah travel arrangements and packages.
+            </p>
+
+            <a href="https://wa.me/923459456645"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="primary-button">
+
+                Enquire About Umrah →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-us section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                WHY CHOOSE US
+            </p>
+
+            <h2>
+                Travel With Confidence
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <span>✈</span>
+
+                <h3>
+                    Travel Assistance
+                </h3>
+
+                <p>
+                    Helpful support for your travel
+                    planning and arrangements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span>🤝</span>
+
+                <h3>
+                    Personal Service
+                </h3>
+
+                <p>
+                    We focus on understanding your
+                    travel requirements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span>🌍</span>
+
+                <h3>
+                    Multiple Destinations
+                </h3>
+
+                <p>
+                    Assistance for domestic and
+                    international travel.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span>📞</span>
+
+                <h3>
+                    Easy Communication
+                </h3>
+
+                <p>
+                    Contact us directly through
+                    WhatsApp, phone or email.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="container contact-container">
+
+
+        <div class="contact-content">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Let's Plan Your
+                Next Journey
+            </h2>
+
+            <p>
+                Have a question about flights, visas,
+                tours or Umrah? Contact Irfan Air Services.
+            </p>
+
+
+            <div class="contact-details">
+
+                <div class="contact-item">
+
+                    <span>📍</span>
+
+                    <div>
+
+                        <strong>
+                            Our Office
+                        </strong>
+
+                        <p>
+                            2nd Floor, Shahparistan Market,
+                            Matta Swat, Pakistan
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>📞</span>
+
+                    <div>
+
+                        <strong>
+                            WhatsApp / Phone
+                        </strong>
+
+                        <p>
+                            +92 345 9456645
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>✉️</span>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <p>
+                            Irfanswat2@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-buttons">
+
+                <a href="https://wa.me/923459456645"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="primary-button">
+
+                    WhatsApp Us →
+
+                </a>
+
+                <a href="mailto:Irfanswat2@gmail.com"
+                   class="secondary-button dark">
+
+                    Send Email
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-map">
+
+            <div class="map-placeholder">
+
+                <div class="map-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Irfan Air Services
+                </h3>
+
+                <p>
+                    Shahparistan Market,
+                    Matta Swat
+                </p>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Shahparistan+Market+Matta+Swat"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Open in Google Maps →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <div class="footer-brand">
+
+            <h3>
+                IRFAN AIR SERVICES
+            </h3>
+
+            <p>
+                Your Journey Our Priority.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#tours">Tours</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div class="footer-social">
+
+            <a href="https://www.facebook.com/share/1H9s8GyfRz/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Facebook
+
+            </a>
+
+            <a href="https://www.instagram.com/irfanairservices"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Irfan Air Services. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a href="https://wa.me/923459456645"
+   class="floating-whatsapp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact Irfan Air Services on WhatsApp">
+
+    WhatsApp
+
+</a>
+
+
+<!-- Main JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
