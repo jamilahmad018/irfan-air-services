@@ -1,1 +1,853 @@
+:root {
+    --navy: #0a3152;
+    --dark: #06243d;
+    --blue: #155b8d;
+    --gold: #d6a34a;
+    --light-gold: #f1c66b;
+    --white: #fff;
+    --light: #f6f8fb;
+    --text: #172635;
+    --muted: #687684;
+    --border: #e5eaf0;
+    --shadow: 0 15px 40px rgba(6,36,61,.10);
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-content h2,
+.umrah-content h2,
+.contact-content h2 {
+    color: var(--dark);
+    font-size: clamp(30px,4vw,45px);
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.section-heading p:last-child,
+.about-content > p:not(.section-label),
+.contact-content > p:not(.section-label) {
+    color: var(--muted);
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+    background: var(--dark);
+    color: white;
+    font-size: 13px;
+}
+
+.top-container {
+    width: min(1180px,92%);
+    min-height: 42px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-contact,
+.top-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-contact a:hover,
+.top-social a:hover {
+    color: var(--light-gold);
+}
+
+
+/* HEADER */
+
+.header {
+    background: rgba(255,255,255,.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 20px rgba(0,0,0,.04);
+}
+
+.nav-container {
+    width: min(1180px,92%);
+    min-height: 88px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 23px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text strong {
+    color: var(--navy);
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.logo-text small {
+    color: var(--muted);
+    font-size: 8px;
+    margin-top: 4px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navigation a {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 30px 0;
+    position: relative;
+}
+
+.navigation a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 21px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: .3s;
+}
+
+.navigation a:hover:after {
+    width: 100%;
+}
+
+.quote-button,
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background
+  /* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image {
+    min-height: 510px;
+    border-radius: 18px;
+    background:
+        linear-gradient(rgba(6,36,61,.18),rgba(6,36,61,.18)),
+        url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1100&q=85")
+        center/cover no-repeat;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.about-badge {
+    position: absolute;
+    right: -25px;
+    bottom: 30px;
+    background: var(--gold);
+    color: white;
+    padding: 20px 27px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-badge strong {
+    font-size: 18px;
+}
+
+.about-badge span {
+    font-size: 13px;
+}
+
+.about-content > p:not(.section-label) {
+    margin-bottom: 17px;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+    margin: 24px 0 28px;
+}
+
+.about-features div {
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+
+/* DESTINATIONS */
+
+.destinations {
+    background: var(--light);
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.destination-card {
+    min-height: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: .4s;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+}
+
+.destination-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 25%,
+        rgba(3,25,43,.88) 100%
+    );
+}
+
+.destination-card.dubai {
+    background-image:url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80");
+}
+
+.destination-card.saudi {
+    background-image:url("https://images.unsplash.com/photo-1564769625392-651b6c8f9b7b?auto=format&fit=crop&w=900&q=80");
+}
+
+.destination-card.turkey {
+    background-image:url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80");
+}
+
+.destination-card.malaysia {
+    background-image:url("https://images.unsplash.com/photo-1508036681969-4a6f9c1e7c4f?auto=format&fit=crop&w=900&q=80");
+}
+
+.destination-overlay {
+    position: absolute;
+    left: 21px;
+    right: 21px;
+    bottom: 21px;
+    color: white;
+}
+
+.destination-overlay span {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: .85;
+}
+
+.destination-overlay h3 {
+    font-size: 23px;
+    margin-top: 3px;
+}
+
+
+/* VISA */
+
+.visa-section {
+    background: white;
+}
+
+.visa-box {
+    background: linear-gradient(
+        110deg,
+        var(--dark),
+        var(--navy)
+    );
+    color: white;
+    border-radius: 18px;
+    padding: 52px 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visa-box:after {
+    content: "✈";
+    position: absolute;
+    right: 45px;
+    top: -45px;
+    font-size: 210px;
+    opacity: .04;
+    transform: rotate(-12deg);
+}
+
+.visa-box h2 {
+    font-size: clamp(28px,4vw,42px);
+    margin-bottom: 9px;
+}
+
+.visa-box p:last-child {
+    opacity: .8;
+}
+
+
+/* UMRAH */
+
+.umrah {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,28,48,.93),
+            rgba(4,28,48,.55)
+        ),
+        url("https://images.unsplash.com/photo-1564769625392-651b6c8f9b7b?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+}
+
+.umrah-container {
+    width: min(1180px,92%);
+}
+
+.umrah-content {
+    max-width: 650px;
+    color: white;
+}
+
+.umrah-content h2 {
+    color: white;
+}
+
+.umrah-content > p:not(.section-label) {
+    color: rgba(255,255,255,.82);
+    margin-bottom: 28px;
+    font-size: 16px;
+}
+
+
+/* WHY CHOOSE US */
+
+.why-us {
+    background: var(--light);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.why-card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(10,42,70,.05);
+    transition: .3s;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-card > span {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: rgba(214,163,74,.14);
+    color: var(--gold);
+    font-size: 24px;
+}
+
+.why-card h3 {
+    color: var(--dark);
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.why-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* CONTACT */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: stretch;
+}
+
+.contact-content > p:not(.section-label) {
+    margin-bottom: 28px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.contact-item > span {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: rgba(214,163,74,.13);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contact-item strong {
+    color: var(--dark);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.contact-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.contact-map {
+    min-height: 420px;
+    border-radius: 17px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(10,53,88,.86),
+            rgba(10,53,88,.86)
+        ),
+        url("https://images.unsplash.com/photo-1524666041070-9f2d5f9f4f5b?auto=format&fit=crop&w=1100&q=80")
+        center/cover no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.map-placeholder {
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.map-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.map-placeholder h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.map-placeholder p {
+    opacity: .8;
+    margin-bottom: 18px;
+}
+
+.map-placeholder a {
+    color: var(--light-gold);
+    font-weight: 700;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: var(--dark);
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h3 {
+    letter-spacing: 1px;
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,.65);
+    margin-top: 6px;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-links a,
+.footer-social a {
+    color: rgba(255,255,255,.7);
+    font-size: 13px;
+    transition: .3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--light-gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+    padding: 19px;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,.5);
+    font-size: 11px;
+}
+
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background: #25d366;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+}
+
+
+/* TABLET */
+
+@media (max-width:1000px) {
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .quick-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width:760px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .top-container {
+        min-height: auto;
+        padding: 9px 0;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .top-contact {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px 14px;
+    }
+
+    .top-social {
+        display: none;
+    }
+
+    .nav-container {
+        min-height: 72px;
+    }
+
+    .logo-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 19px;
+    }
+
+    .logo-text strong {
+        font-size: 20px;
+    }
+
+    .logo-text span {
+        font-size: 8px;
+    }
+
+    .logo-text small {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .quote-button {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .hero-text {
+        padding-top: 35px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 280px;
+    }
+
+    .quick-services {
+        margin-top: -25px;
+    }
+
+    .quick-container {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .quick-item:last-child {
+        border-bottom: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .about-image {
+        min-height: 390px;
+    }
+
+    .about-badge {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        min-height: 300px;
+    }
+
+    .visa-box {
+        padding: 38px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .umrah {
+        min-height: 480px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .contact-map {
+        min-height: 340px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width:420px) {
+
+    .hero h1 {
+      
+        font-size: 40px;
+}
+
+.hero {
+    min-height: 570px;
+}
+
+.section-heading h2,
+.about-content h2,
+.umrah-content h2,
+.contact-content h2 {
+    font-size: 30px;
+}
+
+.floating-whatsapp {
+    right: 12px;
+    bottom: 12px;
+    padding: 11px 15px;
+}
+}   
