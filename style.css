@@ -1,19 +1,17 @@
 :root {
-    --navy: #0a3152;
+    --navy: #092f50;
     --dark: #061f35;
     --blue: #155b8d;
     --gold: #d6a34a;
-    --gold-light: #f3ca72;
+    --gold-light: #f2c86b;
     --white: #ffffff;
     --light: #f5f8fb;
     --text: #172635;
     --muted: #687684;
-    --border: #e4e9ef;
+    --border: #e3e9ef;
     --shadow: 0 18px 45px rgba(6, 36, 61, .12);
-    --shadow-soft: 0 8px 28px rgba(10, 42, 70, .07);
+    --soft-shadow: 0 8px 28px rgba(10, 42, 70, .07);
 }
-
-/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -23,7 +21,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 85px;
 }
 
 body {
@@ -39,14 +37,7 @@ a {
     color: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-button,
-input,
-textarea {
+button {
     font-family: inherit;
 }
 
@@ -60,40 +51,6 @@ textarea {
 }
 
 
-/* ================= SECTION HEADINGS ================= */
-
-.section-heading {
-    max-width: 720px;
-    margin: 0 auto 52px;
-    text-align: center;
-}
-
-.section-label {
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 11px;
-    text-transform: uppercase;
-}
-
-.section-heading h2,
-.about-content h2,
-.umrah-content h2,
-.contact-content h2 {
-    color: var(--dark);
-    font-size: clamp(30px, 4vw, 46px);
-    line-height: 1.12;
-    letter-spacing: -.8px;
-    margin-bottom: 16px;
-}
-
-.section-heading p:not(.section-label) {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-
 /* ================= TOP BAR ================= */
 
 .top-bar {
@@ -103,9 +60,7 @@ textarea {
 }
 
 .top-container {
-    width: min(1180px, 92%);
-    min-height: 44px;
-    margin: auto;
+    min-height: 43px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,9 +75,9 @@ textarea {
 }
 
 .top-contact a,
-.top-social a,
-.top-contact span {
-    opacity: .9;
+.top-contact span,
+.top-social a {
+    opacity: .88;
     transition: .3s ease;
 }
 
@@ -139,16 +94,14 @@ textarea {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, .97);
+    background: rgba(255,255,255,.97);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 4px 22px rgba(0, 0, 0, .05);
+    box-shadow: 0 4px 22px rgba(0,0,0,.05);
     backdrop-filter: blur(12px);
 }
 
 .nav-container {
-    width: min(1180px, 92%);
-    min-height: 88px;
-    margin: auto;
+    min-height: 86px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -163,15 +116,15 @@ textarea {
 }
 
 .logo-icon {
-    width: 49px;
-    height: 49px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: grid;
     place-items: center;
     background: var(--navy);
     color: var(--gold);
-    font-size: 25px;
-    box-shadow: 0 8px 20px rgba(10, 49, 82, .18);
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(10,49,82,.18);
 }
 
 .logo-text {
@@ -182,7 +135,7 @@ textarea {
 
 .logo-text strong {
     color: var(--navy);
-    font-size: 25px;
+    font-size: 24px;
     letter-spacing: 1px;
 }
 
@@ -200,18 +153,21 @@ textarea {
     margin-top: 5px;
 }
 
+
+/* ================= NAVIGATION ================= */
+
 .navigation {
     display: flex;
     align-items: center;
-    gap: 23px;
+    gap: 22px;
 }
 
 .navigation a {
+    position: relative;
     color: var(--dark);
     font-size: 12px;
     font-weight: 700;
-    padding: 33px 0;
-    position: relative;
+    padding: 32px 0;
     transition: .3s ease;
 }
 
@@ -219,10 +175,10 @@ textarea {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 23px;
+    bottom: 22px;
     width: 0;
     height: 2px;
-    border-radius: 10px;
+    border-radius: 5px;
     background: var(--gold);
     transition: .3s ease;
 }
@@ -236,30 +192,66 @@ textarea {
 }
 
 
+/* ================= MOBILE MENU BUTTON ================= */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--dark);
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
 /* ================= BUTTONS ================= */
 
-.quote-button,
-.primary-button {
+.primary-button,
+.quote-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: var(--gold);
-    color: #fff;
     padding: 13px 21px;
     border-radius: 7px;
+    border: 2px solid var(--gold);
+    background: var(--gold);
+    color: #fff;
     font-size: 12px;
     font-weight: 800;
-    border: 2px solid var(--gold);
     transition: .3s ease;
 }
 
-.quote-button:hover,
-.primary-button:hover {
+.primary-button:hover,
+.quote-button:hover {
     background: var(--gold-light);
     border-color: var(--gold-light);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(214, 163, 74, .25);
+    box-shadow: 0 10px 25px rgba(214,163,74,.25);
 }
 
 .secondary-button {
@@ -267,9 +259,9 @@ textarea {
     align-items: center;
     justify-content: center;
     padding: 13px 21px;
-    border: 2px solid rgba(255, 255, 255, .65);
-    color: #fff;
+    border: 2px solid rgba(255,255,255,.65);
     border-radius: 7px;
+    color: #fff;
     font-size: 12px;
     font-weight: 800;
     transition: .3s ease;
@@ -302,28 +294,25 @@ textarea {
     background:
         linear-gradient(
             90deg,
-            rgba(4, 27, 46, .94),
-            rgba(4, 27, 46, .67),
-            rgba(4, 27, 46, .18)
+            rgba(4,27,46,.94),
+            rgba(4,27,46,.66),
+            rgba(4,27,46,.18)
         ),
         url("https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=2000&q=90")
-        center / cover no-repeat;
+        center/cover no-repeat;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(
-            circle at 80% 50%,
-            rgba(214, 163, 74, .10),
-            transparent 35%
-        );
+    background: radial-gradient(
+        circle at 80% 45%,
+        rgba(214,163,74,.10),
+        transparent 35%
+    );
 }
 
 .hero-content {
-    width: min(1180px, 92%);
-    margin: auto;
     position: relative;
     z-index: 2;
 }
@@ -335,7 +324,7 @@ textarea {
 
 .eyebrow {
     color: var(--gold-light);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 3px;
     margin-bottom: 16px;
@@ -343,7 +332,7 @@ textarea {
 
 .hero h1 {
     color: #fff;
-    font-size: clamp(46px, 6vw, 76px);
+    font-size: clamp(48px, 6vw, 76px);
     line-height: 1.03;
     letter-spacing: -2.5px;
     margin-bottom: 22px;
@@ -355,7 +344,7 @@ textarea {
 
 .hero-description {
     max-width: 620px;
-    color: rgba(255, 255, 255, .86);
+    color: rgba(255,255,255,.86);
     font-size: 17px;
     line-height: 1.8;
     margin-bottom: 30px;
@@ -377,22 +366,20 @@ textarea {
 }
 
 .quick-container {
-    width: min(1120px, 92%);
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     background: #fff;
     border-radius: 14px;
-    box-shadow: var(--shadow);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .quick-item {
     min-height: 95px;
-    padding: 20px 18px;
+    padding: 20px 16px;
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 12px;
     border-right: 1px solid var(--border);
     transition: .3s ease;
 }
@@ -406,7 +393,7 @@ textarea {
 }
 
 .quick-icon {
-    font-size: 25px;
+    font-size: 24px;
     flex-shrink: 0;
 }
 
@@ -414,15 +401,45 @@ textarea {
     display: block;
     color: var(--dark);
     font-size: 12px;
-    line-height: 1.4;
 }
 
 .quick-item span {
     display: block;
     color: var(--muted);
     font-size: 9px;
-    line-height: 1.4;
-    margin-top: 4px;
+    margin-top: 3px;
+}
+
+
+/* ================= HEADINGS ================= */
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-content h2 {
+    color: var(--dark);
+    font-size: clamp(30px,4vw,46px);
+    line-height: 1.12;
+    letter-spacing: -.8px;
+    margin-bottom: 15px;
+}
+
+.section-heading p:not(.section-label) {
+    color: var(--muted);
+    font-size: 14px;
 }
 
 
@@ -434,7 +451,7 @@ textarea {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
@@ -443,7 +460,7 @@ textarea {
     border: 1px solid var(--border);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--soft-shadow);
     transition: .35s ease;
 }
 
@@ -466,42 +483,36 @@ textarea {
     background: linear-gradient(
         180deg,
         transparent 55%,
-        rgba(0, 0, 0, .15)
+        rgba(0,0,0,.18)
     );
 }
 
 .ticketing-image {
-    background-image:
-        url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=85");
+    background-image: url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=85");
 }
 
 .visa-image {
-    background-image:
-        url("https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=1000&q=85");
+    background-image: url("https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=1000&q=85");
 }
 
 .tour-image {
-    background-image:
-        url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=85");
+    background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=85");
 }
 
 .hotel-image {
-    background-image:
-        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85");
+    background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85");
 }
 
 .umrah-image {
-    background-image:
-        url("https://images.unsplash.com/photo-1564769625392-651b6c8f9b7b?auto=format&fit=crop&w=1000&q=85");
+    background-image: url("https://images.unsplash.com/photo-1564769625392-651b6c8f9b7b?auto=format&fit=crop&w=1000&q=85");
 }
 
 .transport-image {
-    background-image:
-        url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=85");
+    background-image: url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=85");
 }
 
 .service-content {
-    padding: 25px;
+    padding: 24px;
 }
 
 .service-icon {
@@ -509,30 +520,30 @@ textarea {
     height: 48px;
     display: grid;
     place-items: center;
-    background: rgba(214, 163, 74, .13);
-    border-radius: 50%;
-    font-size: 22px;
     margin-bottom: 15px;
+    border-radius: 50%;
+    background: rgba(214,163,74,.13);
+    font-size: 22px;
 }
 
 .service-content h3 {
     color: var(--dark);
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 19px;
+    margin-bottom: 7px;
 }
 
 .service-content p {
     color: var(--muted);
     font-size: 13px;
     line-height: 1.7;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 }
 
 .service-content a {
     color: var(--navy);
     font-size: 12px;
     font-weight: 800;
-    transition: .3s;
+    transition: .3s ease;
 }
 
 .service-content a:hover {
@@ -550,22 +561,22 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 75px;
+    gap: 70px;
 }
 
 .about-image {
-    min-height: 540px;
+    min-height: 530px;
     border-radius: 18px;
     position: relative;
     overflow: hidden;
     background:
         linear-gradient(
             180deg,
-            rgba(6, 31, 53, .10),
-            rgba(6, 31, 53, .45)
+            rgba(6,31,53,.05),
+            rgba(6,31,53,.45)
         ),
         url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=90")
-        center / cover no-repeat;
+        center/cover no-repeat;
     box-shadow: var(--shadow);
 }
 
@@ -573,9 +584,9 @@ textarea {
     position: absolute;
     left: 25px;
     bottom: 25px;
+    padding: 16px 20px;
     background: #fff;
     border-radius: 10px;
-    padding: 17px 20px;
     box-shadow: var(--shadow);
 }
 
@@ -586,7 +597,7 @@ textarea {
 
 .about-badge strong {
     color: var(--dark);
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .about-badge span {
@@ -614,10 +625,6 @@ textarea {
     font-weight: 700;
 }
 
-.about-features div::first-letter {
-    color: var(--gold);
-}
-
 
 /* ================= DESTINATIONS ================= */
 
@@ -627,15 +634,15 @@ textarea {
 
 .destination-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
 .destination-card {
     min-height: 390px;
-    border-radius: 15px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
     background-position: center;
     background-size: cover;
     transition: .4s ease;
@@ -647,8 +654,8 @@ textarea {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, .02) 30%,
-        rgba(0, 0, 0, .76) 100%
+        transparent 30%,
+        rgba(0,0,0,.78)
     );
 }
 
@@ -657,24 +664,20 @@ textarea {
     box-shadow: var(--shadow);
 }
 
-.destination-card.dubai {
-    background-image:
-        url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=90");
+.dubai {
+    background-image: url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=90");
 }
 
-.destination-card.saudi {
-    background-image:
-        url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=90");
+.saudi {
+    background-image: url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=90");
 }
 
-.destination-card.turkey {
-    background-image:
-        url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=90");
+.turkey {
+    background-image: url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=90");
 }
 
-.destination-card.malaysia {
-    background-image:
-        url("https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=900&q=90");
+.malaysia {
+    background-image: url("https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=900&q=90");
 }
 
 .destination-overlay {
@@ -690,7 +693,7 @@ textarea {
     font-size: 10px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    opacity: .8;
+    opacity: .78;
 }
 
 .destination-overlay h3 {
@@ -709,20 +712,20 @@ textarea {
 .visa-box {
     min-height: 280px;
     padding: 50px 60px;
-    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 35px;
+    border-radius: 18px;
     color: #fff;
     background:
         linear-gradient(
             90deg,
-            rgba(6, 31, 53, .97),
-            rgba(10, 49, 82, .88)
+            rgba(6,31,53,.97),
+            rgba(10,49,82,.86)
         ),
         url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=85")
-        center / cover no-repeat;
+        center/cover no-repeat;
     box-shadow: var(--shadow);
 }
 
@@ -732,14 +735,14 @@ textarea {
 
 .visa-box h2 {
     color: #fff;
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(28px,4vw,42px);
     line-height: 1.15;
     margin-bottom: 13px;
 }
 
 .visa-box p:not(.section-label) {
-    color: rgba(255, 255, 255, .75);
     max-width: 600px;
+    color: rgba(255,255,255,.75);
     font-size: 14px;
 }
 
@@ -753,16 +756,12 @@ textarea {
     background:
         linear-gradient(
             90deg,
-            rgba(5, 29, 49, .94),
-            rgba(5, 29, 49, .62),
-            rgba(5, 29, 49, .25)
+            rgba(5,29,49,.94),
+            rgba(5,29,49,.62),
+            rgba(5,29,49,.22)
         ),
         url("https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=2000&q=90")
-        center / cover no-repeat;
-}
-
-.umrah-container {
-    width: min(1180px, 92%);
+        center/cover no-repeat;
 }
 
 .umrah-content {
@@ -775,11 +774,13 @@ textarea {
 
 .umrah-content h2 {
     color: #fff;
-    font-size: clamp(35px, 5vw, 55px);
+    font-size: clamp(35px,5vw,55px);
+    line-height: 1.1;
+    margin-bottom: 16px;
 }
 
-.umrah-content > p:not(.section-label) {
-    color: rgba(255, 255, 255, .82);
+.umrah-content p:not(.section-label) {
+    color: rgba(255,255,255,.82);
     font-size: 15px;
     line-height: 1.8;
     margin-bottom: 28px;
@@ -794,33 +795,33 @@ textarea {
 
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
 .why-card {
-    text-align: center;
     padding: 35px 22px;
+    text-align: center;
     border: 1px solid var(--border);
     border-radius: 14px;
-    transition: .35s ease;
     background: #fff;
+    transition: .35s ease;
 }
 
 .why-card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-soft);
-    border-color: rgba(214, 163, 74, .35);
+    box-shadow: var(--soft-shadow);
+    border-color: rgba(214,163,74,.35);
 }
 
 .why-card > span {
     width: 55px;
     height: 55px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
     display: grid;
     place-items: center;
-    background: rgba(214, 163, 74, .12);
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(214,163,74,.12);
     font-size: 24px;
 }
 
@@ -846,8 +847,8 @@ textarea {
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
     align-items: center;
+    gap: 60px;
 }
 
 .contact-content > p:not(.section-label) {
@@ -872,17 +873,17 @@ textarea {
     width: 43px;
     height: 43px;
     flex-shrink: 0;
-    border-radius: 50%;
     display: grid;
     place-items: center;
+    border-radius: 50%;
     background: #fff;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
+    box-shadow: 0 5px 18px rgba(0,0,0,.06);
     font-size: 18px;
 }
 
 .contact-item strong {
-    color: var(--dark);
     display: block;
+    color: var(--dark);
     font-size: 12px;
     margin-bottom: 3px;
 }
@@ -900,24 +901,20 @@ textarea {
 
 .contact-map {
     min-height: 430px;
-    border-radius: 18px;
-    overflow: hidden;
-    background:
-        linear-gradient(
-            rgba(10, 49, 82, .84),
-            rgba(10, 49, 82, .84)
-        ),
-        url("https://images.unsplash.com/photo-1524666041070-9d87656c25bb?auto=format&fit=crop&w=1200&q=85")
-        center / cover no-repeat;
-    box-shadow: var(--shadow);
     display: grid;
     place-items: center;
     padding: 35px;
-}
-
-.map-placeholder {
+    border-radius: 18px;
+    overflow: hidden;
     text-align: center;
-    color: #fff;
+    background:
+        linear-gradient(
+            rgba(10,49,82,.87),
+            rgba(10,49,82,.87)
+        ),
+        url("https://images.unsplash.com/photo-1524666041070-9d87656c25bb?auto=format&fit=crop&w=1200&q=85")
+        center/cover no-repeat;
+    box-shadow: var(--shadow);
 }
 
 .map-icon {
@@ -926,10 +923,14 @@ textarea {
     display: grid;
     place-items: center;
     margin: 0 auto 18px;
-    background: rgba(255, 255, 255, .12);
-    border: 1px solid rgba(255, 255, 255, .2);
     border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
     font-size: 27px;
+}
+
+.map-placeholder {
+    color: #fff;
 }
 
 .map-placeholder h3 {
@@ -938,7 +939,7 @@ textarea {
 }
 
 .map-placeholder p {
-    color: rgba(255, 255, 255, .72);
+    color: rgba(255,255,255,.72);
     font-size: 13px;
     margin-bottom: 20px;
 }
@@ -946,7 +947,7 @@ textarea {
 .map-placeholder a {
     display: inline-flex;
     padding: 11px 17px;
-    border: 1px solid rgba(255, 255, 255, .4);
+    border: 1px solid rgba(255,255,255,.4);
     border-radius: 6px;
     font-size: 11px;
     font-weight: 700;
@@ -969,20 +970,37 @@ textarea {
 .footer-container {
     min-height: 190px;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr 1fr;
     align-items: center;
     gap: 40px;
 }
 
-.footer-brand h3 {
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-logo {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #fff;
     font-size: 20px;
+}
+
+.footer-brand h3 {
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
 .footer-brand p {
-    color: rgba(255, 255, 255, .58);
+    color: rgba(255,255,255,.55);
     font-size: 11px;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .footer-links,
@@ -994,9 +1012,9 @@ textarea {
 
 .footer-links a,
 .footer-social a {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255,255,255,.68);
     font-size: 11px;
-    transition: .3s;
+    transition: .3s ease;
 }
 
 .footer-links a:hover,
@@ -1009,84 +1027,77 @@ textarea {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, .09);
-    text-align: center;
     padding: 18px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .footer-bottom p {
-    color: rgba(255, 255, 255, .45);
+    color: rgba(255,255,255,.42);
     font-size: 10px;
 }
 
 
-/* ================= FLOATING WHATSAPP ================= */
+/* ================= WHATSAPP ================= */
 
 .floating-whatsapp {
     position: fixed;
     right: 22px;
     bottom: 22px;
     z-index: 1500;
+    min-width: 120px;
+    height: 48px;
+    padding: 0 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 118px;
-    height: 48px;
-    padding: 0 18px;
+    gap: 7px;
     border-radius: 30px;
     background: #1da851;
     color: #fff;
     font-size: 12px;
     font-weight: 800;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, .20);
+    box-shadow: 0 10px 28px rgba(0,0,0,.20);
     transition: .3s ease;
 }
 
 .floating-whatsapp:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: translateY(-4px);
     background: #168c43;
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 1050px) {
 
     .navigation {
-        gap: 14px;
+        gap: 13px;
     }
 
     .navigation a {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .quote-button {
-        padding: 11px 15px;
-    }
-
-    .quick-item {
-        padding: 18px 12px;
-    }
-
-    .quick-item strong {
-        font-size: 11px;
+        padding: 11px 14px;
     }
 
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .why-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
 
-/* ================= TABLET ================= */
+/* ================= SMALL TABLET ================= */
 
 @media (max-width: 850px) {
 
@@ -1094,28 +1105,20 @@ textarea {
         justify-content: center;
     }
 
-    .top-contact {
-        gap: 12px;
-    }
-
     .top-social {
         display: none;
     }
 
     .nav-container {
-        min-height: 76px;
+        min-height: 74px;
     }
 
     .navigation {
-        gap: 12px;
+        gap: 11px;
     }
 
     .navigation a {
         padding: 27px 0;
-    }
-
-    .navigation a::after {
-        bottom: 18px;
     }
 
     .quote-button {
@@ -1127,7 +1130,7 @@ textarea {
     }
 
     .quick-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 
     .quick-item:nth-child(3) {
@@ -1147,10 +1150,6 @@ textarea {
 
     .about-image {
         min-height: 460px;
-    }
-
-    .contact-map {
-        min-height: 350px;
     }
 
     .visa-box {
@@ -1176,18 +1175,8 @@ textarea {
         padding: 70px 0;
     }
 
-    .container,
-    .top-container,
-    .nav-container,
-    .hero-content,
-    .umrah-container {
+    .container {
         width: 90%;
-    }
-
-    /* Top Bar */
-
-    .top-bar {
-        font-size: 10px;
     }
 
     .top-container {
@@ -1203,19 +1192,16 @@ textarea {
 
     .top-contact a,
     .top-contact span {
+        font-size: 9px;
         white-space: nowrap;
     }
 
-    .top-contact a:first-child {
-        max-width: 115px;
-        overflow: hidden;
+    .top-social {
+        display: none;
     }
 
-    /* Header */
 
-    .header {
-        position: sticky;
-    }
+    /* Mobile Header */
 
     .nav-container {
         min-height: 72px;
@@ -1226,13 +1212,13 @@ textarea {
     }
 
     .logo-icon {
-        width: 42px;
-        height: 42px;
-        font-size: 21px;
+        width: 41px;
+        height: 41px;
+        font-size: 20px;
     }
 
     .logo-text strong {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .logo-text span {
@@ -1241,31 +1227,51 @@ textarea {
     }
 
     .logo-text small {
-        font-size: 7px;
-    }
-
-    .navigation {
-        gap: 13px;
-        overflow-x: auto;
-        max-width: 52%;
-        scrollbar-width: none;
-        padding-bottom: 2px;
-    }
-
-    .navigation::-webkit-scrollbar {
         display: none;
     }
 
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .quote-button {
+        display: none;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        border-top: 1px solid transparent;
+        box-shadow: 0 15px 25px rgba(0,0,0,.08);
+        transition: max-height .35s ease, border-color .35s ease;
+    }
+
+    .navigation.active {
+        max-height: 500px;
+        border-top-color: var(--border);
+    }
+
     .navigation a {
-        flex-shrink: 0;
-        font-size: 10px;
-        padding: 8px 0;
-        white-space: nowrap;
+        padding: 15px 5%;
+        border-bottom: 1px solid var(--border);
+        font-size: 12px;
     }
 
     .navigation a::after {
         display: none;
     }
+
 
     /* Hero */
 
@@ -1274,19 +1280,15 @@ textarea {
         background:
             linear-gradient(
                 180deg,
-                rgba(4, 27, 46, .72),
-                rgba(4, 27, 46, .90)
+                rgba(4,27,46,.68),
+                rgba(4,27,46,.93)
             ),
             url("https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=1200&q=90")
-            center / cover no-repeat;
+            center/cover no-repeat;
     }
 
     .hero-content {
-        padding: 60px 0;
-    }
-
-    .hero-text {
-        max-width: 100%;
+        padding: 70px 0;
     }
 
     .eyebrow {
@@ -1295,9 +1297,8 @@ textarea {
     }
 
     .hero h1 {
-        font-size: clamp(42px, 13vw, 58px);
+        font-size: clamp(42px,13vw,58px);
         letter-spacing: -1.5px;
-        line-height: 1.04;
     }
 
     .hero-description {
@@ -1308,7 +1309,7 @@ textarea {
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
-        max-width: 270px;
+        max-width: 280px;
     }
 
     .primary-button,
@@ -1316,7 +1317,8 @@ textarea {
         width: 100%;
     }
 
-    /* Quick Services */
+
+    /* Quick */
 
     .quick-services {
         margin-top: -30px;
@@ -1325,12 +1327,11 @@ textarea {
     .quick-container {
         width: 90%;
         grid-template-columns: 1fr 1fr;
-        border-radius: 12px;
     }
 
     .quick-item {
         min-height: 82px;
-        padding: 14px 12px;
+        padding: 13px 11px;
     }
 
     .quick-item:nth-child(2) {
@@ -1348,13 +1349,13 @@ textarea {
     }
 
     .quick-item:last-child {
-        grid-column: 1 / -1;
+        grid-column: 1/-1;
         justify-content: center;
         border-right: none;
     }
 
     .quick-icon {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .quick-item strong {
@@ -1365,6 +1366,7 @@ textarea {
         font-size: 8px;
     }
 
+
     /* Headings */
 
     .section-heading {
@@ -1373,10 +1375,10 @@ textarea {
 
     .section-heading h2,
     .about-content h2,
-    .umrah-content h2,
     .contact-content h2 {
-        font-size: 31px;
+        font-size: 30px;
     }
+
 
     /* Services */
 
@@ -1386,12 +1388,9 @@ textarea {
     }
 
     .service-image {
-        height: 200px;
+        height: 195px;
     }
 
-    .service-content {
-        padding: 22px;
-    }
 
     /* About */
 
@@ -1406,8 +1405,8 @@ textarea {
 
     .about-features {
         grid-template-columns: 1fr;
-        gap: 11px;
     }
+
 
     /* Destinations */
 
@@ -1417,8 +1416,9 @@ textarea {
     }
 
     .destination-card {
-        min-height: 360px;
+        min-height: 350px;
     }
+
 
     /* Visa */
 
@@ -1432,14 +1432,20 @@ textarea {
     }
 
     .visa-box h2 {
-        font-size: 31px;
+        font-size: 30px;
     }
+
 
     /* Umrah */
 
     .umrah {
         min-height: 570px;
     }
+
+    .umrah-content h2 {
+        font-size: 37px;
+    }
+
 
     /* Why */
 
@@ -1449,8 +1455,9 @@ textarea {
     }
 
     .why-card {
-        padding: 27px 20px;
+        padding: 28px 20px;
     }
+
 
     /* Contact */
 
@@ -1468,6 +1475,7 @@ textarea {
         border-radius: 14px;
     }
 
+
     /* Footer */
 
     .footer-container {
@@ -1480,11 +1488,12 @@ textarea {
         justify-content: flex-start;
     }
 
+
     /* WhatsApp */
 
     .floating-whatsapp {
-        right: 15px;
-        bottom: 15px;
+        right: 14px;
+        bottom: 14px;
         min-width: 105px;
         height: 45px;
         font-size: 11px;
@@ -1492,29 +1501,16 @@ textarea {
 }
 
 
-/* ================= SMALL PHONES ================= */
+/* ================= VERY SMALL PHONES ================= */
 
 @media (max-width: 400px) {
 
-    .logo-text small {
-        display: none;
-    }
-
     .logo-text strong {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .logo-text span {
         font-size: 7px;
-    }
-
-    .navigation {
-        max-width: 45%;
-        gap: 10px;
-    }
-
-    .navigation a {
-        font-size: 9px;
     }
 
     .hero h1 {
@@ -1525,48 +1521,15 @@ textarea {
         font-size: 13px;
     }
 
-    .quick-item {
-        min-height: 78px;
-    }
-
     .quick-item span {
         display: none;
     }
 
-    .service-image {
-        height: 180px;
-    }
-
     .destination-card {
-        min-height: 320px;
+        min-height: 315px;
     }
 
-    .section-heading h2,
-    .about-content h2,
-    .umrah-content h2,
-    .contact-content h2 {
-        font-size: 28px;
-    }
-}
-
-
-/* ================= ACCESSIBILITY ================= */
-
-a:focus-visible {
-    outline: 3px solid rgba(214, 163, 74, .55);
-    outline-offset: 4px;
-}
-
-
-/* ================= REDUCED MOTION ================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-        animation: none !important;
+    .umrah-content h2 {
+        font-size: 32px;
     }
 }
